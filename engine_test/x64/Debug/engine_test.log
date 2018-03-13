@@ -1,0 +1,113 @@
+﻿  main.cpp
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\render\text_engine.h(95): warning C4267: 'argument' : conversion de 'size_t' en 'GLsizei', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\gui\slope.h(129): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\engine.h(224): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(25): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(26): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(27): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(55): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(56): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(57): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(58): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(59): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(60): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(68): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(69): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(70): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(71): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(74): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(75): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(76): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\noise\perlin.h(77): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(72): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(73): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(74): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(97): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(98): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(100): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(101): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(103): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(104): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(108): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(109): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(111): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(112): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(114): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(115): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\engine_test\src\engine_test.h(184): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  utils.cpp
+  vbo.cpp
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\render\text_engine.h(95): warning C4267: 'argument' : conversion de 'size_t' en 'GLsizei', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\gui\slope.h(129): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\engine.h(224): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  fbo.cpp
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\render\text_engine.h(95): warning C4267: 'argument' : conversion de 'size_t' en 'GLsizei', perte possible de données
+  Génération de code en cours...
+fbo.obj : error LNK2001: symbole externe non résolu __imp___glewActiveTexture
+fbo.obj : error LNK2001: symbole externe non résolu __imp___glewGetUniformLocation
+main.obj : error LNK2001: symbole externe non résolu __imp___glewGetUniformLocation
+fbo.obj : error LNK2001: symbole externe non résolu __imp___glewUniform1i
+fbo.obj : error LNK2001: symbole externe non résolu __imp___glewBindFramebuffer
+fbo.obj : error LNK2001: symbole externe non résolu __imp___glewCheckFramebufferStatus
+fbo.obj : error LNK2001: symbole externe non résolu __imp___glewDeleteFramebuffers
+fbo.obj : error LNK2001: symbole externe non résolu __imp___glewFramebufferTexture2D
+fbo.obj : error LNK2001: symbole externe non résolu __imp___glewGenFramebuffers
+vbo.obj : error LNK2001: symbole externe non résolu __imp___glewBindBuffer
+vbo.obj : error LNK2001: symbole externe non résolu __imp___glewBufferData
+vbo.obj : error LNK2001: symbole externe non résolu __imp___glewDeleteBuffers
+vbo.obj : error LNK2001: symbole externe non résolu __imp___glewGenBuffers
+vbo.obj : error LNK2001: symbole externe non résolu __imp___glewEnableVertexAttribArray
+vbo.obj : error LNK2001: symbole externe non résolu __imp___glewVertexAttribPointer
+vbo.obj : error LNK2001: symbole externe non résolu __imp___glewBindVertexArray
+vbo.obj : error LNK2001: symbole externe non résolu __imp___glewDeleteVertexArrays
+vbo.obj : error LNK2001: symbole externe non résolu __imp___glewGenVertexArrays
+main.obj : error LNK2019: symbole externe non résolu __imp_glewInit référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glewGetErrorString référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutInitWindowPosition référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutInitWindowSize référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutInitDisplayMode référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutMainLoop référencé dans la fonction main
+main.obj : error LNK2019: symbole externe non résolu __imp_glutDestroyWindow référencé dans la fonction "public: static void __cdecl YEngine::keyboardDown(unsigned char,int,int)" (?keyboardDown@YEngine@@SAXEHH@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutReshapeWindow référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutFullScreen référencé dans la fonction "public: void __cdecl YEngine::setFullScreen(bool)" (?setFullScreen@YEngine@@QEAAX_N@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutPostRedisplay référencé dans la fonction "public: void __cdecl YRenderer::render(float)" (?render@YRenderer@@QEAAXM@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutSwapBuffers référencé dans la fonction "public: void __cdecl YRenderer::render(float)" (?render@YRenderer@@QEAAXM@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutWarpPointer référencé dans la fonction "public: virtual void __cdecl YEngineTest::mouseMove(int,int,bool,bool)" (?mouseMove@YEngineTest@@UEAAXHH_N0@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutSetCursor référencé dans la fonction "public: void __cdecl YEngine::showMouse(bool)" (?showMouse@YEngine@@QEAAX_N@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutKeyboardFunc référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutSpecialFunc référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutReshapeFunc référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutDisplayFunc référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutMouseFunc référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutMotionFunc référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutPassiveMotionFunc référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutKeyboardUpFunc référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutSpecialUpFunc référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutIgnoreKeyRepeat référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp___glutInitWithExit référencé dans la fonction glutInit_ATEXIT_HACK
+main.obj : error LNK2019: symbole externe non résolu __imp___glutCreateWindowWithExit référencé dans la fonction glutCreateWindow_ATEXIT_HACK
+main.obj : error LNK2019: symbole externe non résolu __imp_glutLeaveFullScreen référencé dans la fonction "public: void __cdecl YEngine::setFullScreen(bool)" (?setFullScreen@YEngine@@QEAAX_N@Z)
+main.obj : error LNK2019: symbole externe non résolu __imp_glutSetOption référencé dans la fonction "public: void __cdecl YEngine::initBase(int,char * * const)" (?initBase@YEngine@@QEAAXHQEAPEAD@Z)
+main.obj : error LNK2019: symbole externe non résolu png_image_begin_read_from_file référencé dans la fonction "private: signed char __cdecl YTexManager::loadImageFile_PNG(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &,struct png_image *,unsigned char * *)" (?loadImageFile_PNG@YTexManager@@AEAACAEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUpng_image@@PEAPEAE@Z)
+main.obj : error LNK2019: symbole externe non résolu png_image_finish_read référencé dans la fonction "private: signed char __cdecl YTexManager::loadImageFile_PNG(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &,struct png_image *,unsigned char * *)" (?loadImageFile_PNG@YTexManager@@AEAACAEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUpng_image@@PEAPEAE@Z)
+main.obj : error LNK2001: symbole externe non résolu __imp___glewBlendFuncSeparate
+main.obj : error LNK2001: symbole externe non résolu __imp___glewAttachShader
+main.obj : error LNK2001: symbole externe non résolu __imp___glewBlendEquationSeparate
+main.obj : error LNK2001: symbole externe non résolu __imp___glewCompileShader
+main.obj : error LNK2001: symbole externe non résolu __imp___glewCreateProgram
+main.obj : error LNK2001: symbole externe non résolu __imp___glewCreateShader
+main.obj : error LNK2001: symbole externe non résolu __imp___glewDeleteProgram
+main.obj : error LNK2001: symbole externe non résolu __imp___glewDeleteShader
+main.obj : error LNK2001: symbole externe non résolu __imp___glewGetProgramInfoLog
+main.obj : error LNK2001: symbole externe non résolu __imp___glewGetProgramiv
+main.obj : error LNK2001: symbole externe non résolu __imp___glewGetShaderInfoLog
+main.obj : error LNK2001: symbole externe non résolu __imp___glewGetShaderiv
+main.obj : error LNK2001: symbole externe non résolu __imp___glewLinkProgram
+main.obj : error LNK2001: symbole externe non résolu __imp___glewShaderSource
+main.obj : error LNK2001: symbole externe non résolu __imp___glewUniform2f
+main.obj : error LNK2001: symbole externe non résolu __imp___glewUniformMatrix4fv
+main.obj : error LNK2001: symbole externe non résolu __imp___glewUseProgram
+main.obj : error LNK2001: symbole externe non résolu __imp___glewGenerateMipmap
+..\lib\glew32.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+..\lib\freeglut.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\x64\Debug\engine_test.exe : fatal error LNK1120: 64 externes non résolus

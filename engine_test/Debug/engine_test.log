@@ -1,0 +1,35 @@
+﻿  main.cpp
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\engine.h(261): warning C4018: '<' : incompatibilité signed/unsigned
+  utils.cpp
+  vbo.cpp
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\engine.h(261): warning C4018: '<' : incompatibilité signed/unsigned
+  fbo.cpp
+  Génération de code en cours...
+  libpng16.lib(pngread.obj) : .netmodule ou module MSIL compilé avec /GL trouvé ; redémarrage de l'édition de liens avec /LTCG ; ajoutez /LTCG à la ligne de commande de l'édition de liens pour améliorer les performances de l'Éditeur de liens
+LINK : warning LNK4075: ' /INCREMENTAL' ignorÚ Ó cause de la spÚcification '/LTCG'
+LINK : warning LNK4098: conflit entre la bibliothÞque par dÚfaut 'LIBCMT' et les autres bibliothÞquesá; utilisez /NODEFAULTLIB:library
+  GÚnÚration de code en cours
+  Fin de la gÚnÚration du code
+libpng16.lib(pngread.obj) : warning LNK4099: PDB 'libpng.pdb' n'a pu Ûtre trouvÚ avec 'libpng16.lib(pngread.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\libpng.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+libpng16.lib(png.obj) : warning LNK4099: PDB 'libpng.pdb' n'a pu Ûtre trouvÚ avec 'libpng16.lib(png.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\libpng.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+libpng16.lib(pngrio.obj) : warning LNK4099: PDB 'libpng.pdb' n'a pu Ûtre trouvÚ avec 'libpng16.lib(pngrio.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\libpng.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+libpng16.lib(pngrutil.obj) : warning LNK4099: PDB 'libpng.pdb' n'a pu Ûtre trouvÚ avec 'libpng16.lib(pngrutil.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\libpng.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+libpng16.lib(pngerror.obj) : warning LNK4099: PDB 'libpng.pdb' n'a pu Ûtre trouvÚ avec 'libpng16.lib(pngerror.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\libpng.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+libpng16.lib(pngrtran.obj) : warning LNK4099: PDB 'libpng.pdb' n'a pu Ûtre trouvÚ avec 'libpng16.lib(pngrtran.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\libpng.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+libpng16.lib(pngtrans.obj) : warning LNK4099: PDB 'libpng.pdb' n'a pu Ûtre trouvÚ avec 'libpng16.lib(pngtrans.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\libpng.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+libpng16.lib(pngmem.obj) : warning LNK4099: PDB 'libpng.pdb' n'a pu Ûtre trouvÚ avec 'libpng16.lib(pngmem.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\libpng.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+libpng16.lib(pngset.obj) : warning LNK4099: PDB 'libpng.pdb' n'a pu Ûtre trouvÚ avec 'libpng16.lib(pngset.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\libpng.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+libpng16.lib(pngget.obj) : warning LNK4099: PDB 'libpng.pdb' n'a pu Ûtre trouvÚ avec 'libpng16.lib(pngget.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\libpng.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+libpng16.lib(pngwrite.obj) : warning LNK4099: PDB 'libpng.pdb' n'a pu Ûtre trouvÚ avec 'libpng16.lib(pngwrite.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\libpng.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+libpng16.lib(pngwutil.obj) : warning LNK4099: PDB 'libpng.pdb' n'a pu Ûtre trouvÚ avec 'libpng16.lib(pngwutil.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\libpng.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+libpng16.lib(pngwio.obj) : warning LNK4099: PDB 'libpng.pdb' n'a pu Ûtre trouvÚ avec 'libpng16.lib(pngwio.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\libpng.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+libpng16.lib(pngwtran.obj) : warning LNK4099: PDB 'libpng.pdb' n'a pu Ûtre trouvÚ avec 'libpng16.lib(pngwtran.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\libpng.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+zlib.lib(inflate.obj) : warning LNK4099: PDB 'zlib.pdb' n'a pu Ûtre trouvÚ avec 'zlib.lib(inflate.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\zlib.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+zlib.lib(adler32.obj) : warning LNK4099: PDB 'zlib.pdb' n'a pu Ûtre trouvÚ avec 'zlib.lib(adler32.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\zlib.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+zlib.lib(crc32.obj) : warning LNK4099: PDB 'zlib.pdb' n'a pu Ûtre trouvÚ avec 'zlib.lib(crc32.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\zlib.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+zlib.lib(deflate.obj) : warning LNK4099: PDB 'zlib.pdb' n'a pu Ûtre trouvÚ avec 'zlib.lib(deflate.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\zlib.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+zlib.lib(inftrees.obj) : warning LNK4099: PDB 'zlib.pdb' n'a pu Ûtre trouvÚ avec 'zlib.lib(inftrees.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\zlib.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+zlib.lib(inffast.obj) : warning LNK4099: PDB 'zlib.pdb' n'a pu Ûtre trouvÚ avec 'zlib.lib(inffast.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\zlib.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+zlib.lib(zutil.obj) : warning LNK4099: PDB 'zlib.pdb' n'a pu Ûtre trouvÚ avec 'zlib.lib(zutil.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\zlib.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+zlib.lib(trees.obj) : warning LNK4099: PDB 'zlib.pdb' n'a pu Ûtre trouvÚ avec 'zlib.lib(trees.obj)' ou sur 'C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\zlib.pdb'á; l'objet sera liÚ sans informations de dÚbogage
+  engine_test.vcxproj -> C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Image\yoctons\yocto_noshaders\Debug\engine_test.exe

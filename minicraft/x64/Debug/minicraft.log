@@ -1,0 +1,11 @@
+﻿  main.cpp
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\minicraft\src\main.cpp(23): fatal error C1010: fin de fichier inattendue lors de la recherche d'un en-tête précompilé. N'auriez-vous pas oublié d'ajouter '#include "stdafx.h"' à votre source ?
+  boid.cpp
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\minicraft\src\boid.cpp(203): fatal error C1010: fin de fichier inattendue lors de la recherche d'un en-tête précompilé. N'auriez-vous pas oublié d'ajouter '#include "stdafx.h"' à votre source ?
+  utils.cpp
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\utils\utils.cpp(100): fatal error C1010: fin de fichier inattendue lors de la recherche d'un en-tête précompilé. N'auriez-vous pas oublié d'ajouter '#include "stdafx.h"' à votre source ?
+  vbo.cpp
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\render\vbo.cpp(68): fatal error C1010: fin de fichier inattendue lors de la recherche d'un en-tête précompilé. N'auriez-vous pas oublié d'ajouter '#include "stdafx.h"' à votre source ?
+  fbo.cpp
+c:\users\sulia\documents\cours\enjmin\prog\synthese_image\yoctons\yocto_noshaders\src\engine\render\fbo.cpp(173): fatal error C1010: fin de fichier inattendue lors de la recherche d'un en-tête précompilé. N'auriez-vous pas oublié d'ajouter '#include "stdafx.h"' à votre source ?
+  Génération de code en cours...
