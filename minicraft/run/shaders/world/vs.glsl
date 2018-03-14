@@ -5,6 +5,8 @@ uniform mat4 m;
 uniform mat4 mv;
 uniform mat4 nmat;
 uniform float elapsed;
+uniform mat4 V_light;
+uniform mat4 P_light;
 
 layout(location=0) in vec3 vs_position_in;
 layout(location=1) in vec3 vs_normal_in;
@@ -17,6 +19,7 @@ out vec4 color;
 out vec2 uv;
 flat out int type;
 out vec4 vecIn;
+out vec4 shadowCoord;
 
 #define CUBE_HERBE 0.0
 #define CUBE_TERRE 1.0
@@ -26,6 +29,13 @@ out vec4 vecIn;
 #define CUBE_TRONC 5.0f
 #define CUBE_SABLE 6.0f
 #define CUBE_NUAGE 7.0f
+
+mat4 biasMatrix = mat4(
+0.5, 0.0, 0.0, 0.0,
+0.0, 0.5, 0.0, 0.0,
+0.0, 0.0, 0.5, 0.0,
+0.5, 0.5, 0.5, 1.0
+);
 
 const vec4 CubeColors[8]=vec4[8](
 	vec4(0.1,0.7,0.2,1.0), //CUBE_HERBE
@@ -86,6 +96,9 @@ void main()
 
 	gl_Position =  mvp * vecIn;
 
+	mat4 depthMVP = P_light * V_light * m;
+	mat4 biasDepthMVP = biasMatrix * depthMVP;
+	shadowCoord = biasDepthMVP * vec4(vs_position_in,1.0);
 			
 	normal = (nmat * vec4(vs_normal_in,1.0)).xyz; 
 

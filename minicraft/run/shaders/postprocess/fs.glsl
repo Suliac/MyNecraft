@@ -1,9 +1,11 @@
 #version 400
 
 in vec2 uv;
+in vec4 shadowCoord;
 
 uniform sampler2D TexColor;
 uniform sampler2D TexDepth;
+uniform sampler2D TexShadow;
 uniform float screen_width;
 uniform float screen_height;
 uniform vec2 near_far;
