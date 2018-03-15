@@ -42,7 +42,7 @@ void main()
 	float cosTheta = dot(normal, lightDir);
 	cosTheta = clamp(cosTheta, 0.0, 1.0);
 
-	float bias = 0.005 * tan(acos(cosTheta));
+	float bias = 0.007 * tan(acos(cosTheta));
 	bias = clamp(bias, 0.0,0.01);
 
 	float visibility = 1.0;

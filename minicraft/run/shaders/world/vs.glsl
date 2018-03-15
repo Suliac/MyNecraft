@@ -7,6 +7,7 @@ uniform mat4 nmat;
 uniform float elapsed;
 uniform mat4 V_light;
 uniform mat4 P_light;
+uniform vec3 camPos;
 
 layout(location=0) in vec3 vs_position_in;
 layout(location=1) in vec3 vs_normal_in;
@@ -79,23 +80,30 @@ void main()
 
 	vec4 worldPosition = m * vecIn;
 
+ 	//////////////// Essai gerstner waves
 	if(type == 3.0) // Si eau
 	{
-		for(int i=0;i<numberwaves;i++) // Essai gerstner waves
+		for(int i=0;i<numberwaves;i++)
 		{
 			float steepness = 1.0 / (wavelength[i]/amplitude[i]);
 
 			vecIn.y += ((steepness * amplitude[i]) * direction[i].y * cos(wavelength[i] * (dot(direction[i], worldPosition.xy)) + speedwave[i] * elapsed));
 			vecIn.x += ((steepness * amplitude[i]) * direction[i].x * cos(wavelength[i] * (dot(direction[i], worldPosition.xy)) + speedwave[i] * elapsed));
 			vecIn.z += ( amplitude[i] * sin(wavelength[i] * (dot(direction[i], worldPosition.xy)) + speedwave[i] * elapsed))-0.55;
-			// vecIn.z += sin((worldPosition.x+worldPosition.y)/3+elapsed)/2 -0.55;
-			// vecIn.y += cos(vecIn.z/3+elapsed)/2;
-			// vecIn.y += cos(vecIn.x/3+elapsed)/2;
 		}
 	}
 
+	///////////////////////////////////////////////
+	// Round world
+	vec4 worldSpacePos = m * vecIn;
+	worldSpacePos.xyz -= camPos.xyz; 
+	worldSpacePos = vec4( 0.0, 0.0, ((worldSpacePos.x * worldSpacePos.x) + (worldSpacePos.y * worldSpacePos.y))* - 0.001, 0.0);
+
+	vecIn +=  worldSpacePos;
+	////////////////////////////////////////////////
 	gl_Position =  mvp * vecIn;
 
+	// Calcul shadow coord
 	mat4 depthMVP = P_light * V_light * m;
 	mat4 biasDepthMVP = biasMatrix * depthMVP;
 	shadowCoord = biasDepthMVP * vec4(vs_position_in,1.0);
