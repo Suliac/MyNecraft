@@ -86,7 +86,9 @@ public:
 		VboCube->deleteVboCpu();
 
 		FboReflections = new YFbo(false, 1, 2);
-		FboShadows = new YFbo(true, 1, 1);
+		FboReflections->HasDepth = true;
+
+		FboShadows = new YFbo(true, 1, 0.25f);
 		FboPostProcess = new YFbo();
 
 		World = new MWorld();
@@ -118,6 +120,7 @@ public:
 
 	YVec3f symetry(float zplane, YVec3f pos) {
 		pos.Z -= (pos.Z - zplane) * 2;
+		pos.Z += (0.5f) * 2;
 		return pos;
 	}
 
@@ -137,8 +140,14 @@ public:
 		renderScene(PASS::PASS_SHADOW);
 
 		//Passe reflections
-		FboReflections->setAsOutFBO(true);
 		glEnable(GL_CLIP_DISTANCE0);
+		double plane[4] = { 0.0, 0.0, -1.0, 60.0 }; //water at y=0
+		//glEnable(GL_CLIP_PLANE0);
+		//glClipPlane(GL_CLIP_PLANE0, plane);
+
+
+		FboReflections->setAsOutFBO(true);
+
 		YVec3f realcamPos = Renderer->Camera->Position;
 		YVec3f realcamLookAt = Renderer->Camera->LookAt;
 
@@ -148,6 +157,8 @@ public:
 		Renderer->updateMatricesFromOgl();
 
 		renderScene(PASS::PASS_REFLECT);
+
+		glDisable(GL_CLIP_DISTANCE0);
 
 		Renderer->Camera->setPosition(realcamPos);
 		Renderer->Camera->setLookAt(realcamLookAt);
@@ -161,7 +172,6 @@ public:
 		FboPostProcess->setAsOutFBO(false);
 
 		glUseProgram(ShaderPostProcess);
-
 		glDisable(GL_CULL_FACE);
 		glDisable(GL_DEPTH_TEST);
 
@@ -266,7 +276,7 @@ public:
 		}
 
 		glUseProgram(ShaderBoids);
-		Boids->render(ShaderBoids,VboCube);
+		Boids->render(ShaderBoids, VboCube);
 	}
 
 	void resize(int width, int height) {
@@ -368,7 +378,8 @@ public:
 			fTime -= mnCoucher;
 			fTime /= (mnLever + 24 * 60 - mnCoucher);
 			fTime *= (float)M_PI;
-		} else {
+		}
+		else {
 			//c'est le jour
 			nuit = false;
 			fTime -= mnLever;
@@ -403,7 +414,8 @@ public:
 
 			SunColor = SunColor.interpolate(downColor, (abs(SunDirection.X)));
 			SkyColor = SkyColor.interpolate(downColor, (abs(SunDirection.X)));
-		} else {
+		}
+		else {
 			//La nuit : lune blanche et ciel noir
 			SunColor = YColor(1, 1, 1, 1);
 			SkyColor = YColor(0, 0, 0, 1);
@@ -469,7 +481,8 @@ public:
 			lastx = x;
 			lasty = y;
 			showMouse(true);
-		} else {
+		}
+		else {
 			if (lastx == -1 && lasty == -1) {
 				lastx = x;
 				lasty = y;
@@ -492,7 +505,8 @@ public:
 					glutWarpPointer(Renderer->ScreenWidth / 2, Renderer->ScreenHeight / 2);
 					lastx = Renderer->ScreenWidth / 2;
 					lasty = Renderer->ScreenHeight / 2;
-				} else {
+				}
+				else {
 					showMouse(false);
 					Renderer->Camera->rotate((float)-dx / 300.0f);
 					Renderer->Camera->rotateUp((float)-dy / 300.0f);
@@ -516,7 +530,8 @@ public:
 					avance *= (float)dy / 2.0f;
 
 					Renderer->Camera->move(avance + strafe);
-				} else {
+				}
+				else {
 					YVec3f strafe = Renderer->Camera->RightVec;
 					strafe.Z = 0;
 					strafe.normalize();

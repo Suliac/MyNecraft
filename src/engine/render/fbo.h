@@ -15,10 +15,10 @@ public:
 	GLuint FBO;
 	int Width;
 	int Height;
-	int SizeDiv;
+	float SizeDiv;
 	bool HasDepth;
 
-	YFbo(bool depth = true, int nbOutTex = 1, int sizeDiv = 1)
+	YFbo(bool depth = true, int nbOutTex = 1, float sizeDiv = 1)
 	{
 		ColorTex = new GLuint[nbOutTex];
 		memset(ColorTex, 0x00, sizeof(GLuint) *nbOutTex);

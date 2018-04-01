@@ -1,10 +1,11 @@
 #version 400
 
-uniform mat4 mvp;
 uniform mat4 m;
 uniform mat4 mv;
+uniform mat4 mvp;
 uniform mat4 nmat;
 uniform float elapsed;
+uniform float water_height;
 uniform mat4 V_light;
 uniform mat4 P_light;
 uniform vec3 camPos;
@@ -21,6 +22,12 @@ out vec2 uv;
 flat out int type;
 out vec4 vecIn;
 out vec4 shadowCoord;
+
+// reflexion
+out vec4 waterTex1;
+out vec4 waterTex2;
+out vec4 waterTex3;
+out vec4 waterTex4;
 
 #define CUBE_HERBE 0.0
 #define CUBE_TERRE 1.0
@@ -52,13 +59,13 @@ const vec4 CubeColors[8]=vec4[8](
 const int numberwaves = 2;
 
 const float amplitude[numberwaves]=float[numberwaves](
-	0.33,
-	0.33
+	0.1,
+	0.15
 );
 
 const vec2 direction[numberwaves]=vec2[numberwaves](
 	vec2(1.0, 0.0),
-	vec2(0.0, 1.0)
+	vec2(0.71, 0.71)
 );
 
 const float wavelength[numberwaves]=float[numberwaves](
@@ -68,7 +75,7 @@ const float wavelength[numberwaves]=float[numberwaves](
 
 const float speedwave[numberwaves]=float[numberwaves](
 	1.0,
-	1.0
+	2.5
 );
 
 void main()
@@ -77,19 +84,26 @@ void main()
 	type = int(vs_type_in);
 
 	vecIn = vec4(vs_position_in,1.0);
+	vec4 normIn = vec4(vs_normal_in, 1.0);
 
 	vec4 worldPosition = m * vecIn;
 
  	//////////////// Essai gerstner waves
 	if(type == 3.0) // Si eau
 	{
+		vecIn.z = water_height;
+		normIn.z = 1.0;
 		for(int i=0;i<numberwaves;i++)
 		{
 			float steepness = 1.0 / (wavelength[i]/amplitude[i]);
 
-			vecIn.y += ((steepness * amplitude[i]) * direction[i].y * cos(wavelength[i] * (dot(direction[i], worldPosition.xy)) + speedwave[i] * elapsed));
 			vecIn.x += ((steepness * amplitude[i]) * direction[i].x * cos(wavelength[i] * (dot(direction[i], worldPosition.xy)) + speedwave[i] * elapsed));
-			vecIn.z += ( amplitude[i] * sin(wavelength[i] * (dot(direction[i], worldPosition.xy)) + speedwave[i] * elapsed))-0.55;
+			vecIn.y += ((steepness * amplitude[i]) * direction[i].y * cos(wavelength[i] * (dot(direction[i], worldPosition.xy)) + speedwave[i] * elapsed));
+			vecIn.z += ( amplitude[i] * sin(wavelength[i] * (dot(direction[i], worldPosition.xy)) + speedwave[i] * elapsed));
+
+			normIn.x -= (direction[i].x * (wavelength[i] * amplitude[i]) * (cos(wavelength[i] * (dot(direction[i], vecIn.xy)) + speedwave[i] * elapsed)));
+			normIn.y -= (direction[i].y * (wavelength[i] * amplitude[i]) * (cos(wavelength[i] * (dot(direction[i], vecIn.xy)) + speedwave[i] * elapsed)));
+			normIn.z -= steepness * wavelength[i] * amplitude[i] * sin(wavelength[i] * (dot(direction[i], vecIn.xy)) + speedwave[i] * elapsed);
 		}
 	}
 
@@ -97,18 +111,43 @@ void main()
 	// Round world
 	vec4 worldSpacePos = m * vecIn;
 	worldSpacePos.xyz -= camPos.xyz; 
-	worldSpacePos = vec4( 0.0, 0.0, ((worldSpacePos.x * worldSpacePos.x) + (worldSpacePos.y * worldSpacePos.y))* - 0.001, 0.0);
+	// worldSpacePos = vec4( 0.0, 0.0, ((worldSpacePos.x * worldSpacePos.x) + (worldSpacePos.y * worldSpacePos.y))* - 0.001, 0.0);
 
-	vecIn +=  worldSpacePos;
+	// vecIn +=  worldSpacePos;
+
 	////////////////////////////////////////////////
-	gl_Position =  mvp * vecIn;
-
 	// Calcul shadow coord
 	mat4 depthMVP = P_light * V_light * m;
 	mat4 biasDepthMVP = biasMatrix * depthMVP;
-	shadowCoord = biasDepthMVP * vec4(vs_position_in,1.0);
+	shadowCoord = biasDepthMVP * (vec4(vs_position_in,1.0));
 			
-	normal = (nmat * vec4(vs_normal_in,1.0)).xyz; 
+	normal = (nmat * normIn).xyz; 
 
 	color = CubeColors[int(vs_type_in)];
+
+	////////////////////////////////////////////////
+	// Reflexion
+	gl_ClipDistance[0] = -dot(m * vecIn, vec4(0, 0, -1, water_height));
+	
+	vec4 tangent = vec4(1.0, 0.0, 0.0, 0.0);
+    vec4 norm = vec4(0.0, 1.0, 0.0, 0.0);
+    vec4 binormal = vec4(0.0, 0.0, 1.0, 0.0);
+
+	vec4 temp = m *vec4(camPos, 1.0) - m *vecIn;
+    waterTex4.x = dot(temp, tangent);
+    waterTex4.y = dot(temp, binormal);
+    waterTex4.z = dot(temp, norm);
+    waterTex4.w = 0.0;
+
+	waterTex3 = mvp * vecIn *vec4(1.0, -1.0, 1.0, 1.0);
+
+	// vec4 t1 = vec4(0.0, -time, 0.0,0.0);
+    // vec4 t2 = vec4(0.0, -time2, 0.0,0.0);    
+
+    // waterTex1 = gl_MultiTexCoord0 + t1;
+    // waterTex2 = gl_MultiTexCoord0 + t2;
+  
+    // waterTex3 = mpos;
+	////////////////////////////////////////////////
+	gl_Position =  mvp * vecIn;
 }
