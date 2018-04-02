@@ -88,7 +88,7 @@ public:
 		FboReflections = new YFbo(false, 1, 2);
 		FboReflections->HasDepth = true;
 
-		FboShadows = new YFbo(true, 1, 0.25f);
+		FboShadows = new YFbo(true, 1, 0.1f);
 		FboPostProcess = new YFbo();
 
 		World = new MWorld();
@@ -120,7 +120,7 @@ public:
 
 	YVec3f symetry(float zplane, YVec3f pos) {
 		pos.Z -= (pos.Z - zplane) * 2;
-		pos.Z += (0.5f) * 2;
+		//pos.Z -= (0.25f) ;
 		return pos;
 	}
 

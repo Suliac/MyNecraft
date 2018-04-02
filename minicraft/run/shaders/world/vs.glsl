@@ -59,8 +59,8 @@ const vec4 CubeColors[8]=vec4[8](
 const int numberwaves = 2;
 
 const float amplitude[numberwaves]=float[numberwaves](
-	0.1,
-	0.15
+	0.33,
+	0.33
 );
 
 const vec2 direction[numberwaves]=vec2[numberwaves](
@@ -101,9 +101,9 @@ void main()
 			vecIn.y += ((steepness * amplitude[i]) * direction[i].y * cos(wavelength[i] * (dot(direction[i], worldPosition.xy)) + speedwave[i] * elapsed));
 			vecIn.z += ( amplitude[i] * sin(wavelength[i] * (dot(direction[i], worldPosition.xy)) + speedwave[i] * elapsed));
 
-			normIn.x -= (direction[i].x * (wavelength[i] * amplitude[i]) * (cos(wavelength[i] * (dot(direction[i], vecIn.xy)) + speedwave[i] * elapsed)));
-			normIn.y -= (direction[i].y * (wavelength[i] * amplitude[i]) * (cos(wavelength[i] * (dot(direction[i], vecIn.xy)) + speedwave[i] * elapsed)));
-			normIn.z -= steepness * wavelength[i] * amplitude[i] * sin(wavelength[i] * (dot(direction[i], vecIn.xy)) + speedwave[i] * elapsed);
+			normIn.x -= (direction[i].x * (wavelength[i] * amplitude[i]) * (cos(wavelength[i] * (dot(direction[i], worldPosition.xy)) + speedwave[i] * elapsed)));
+			normIn.y -= (direction[i].y * (wavelength[i] * amplitude[i]) * (cos(wavelength[i] * (dot(direction[i], worldPosition.xy)) + speedwave[i] * elapsed)));
+			normIn.z -= steepness * wavelength[i] * amplitude[i] * sin(wavelength[i] * (dot(direction[i], worldPosition.xy)) + speedwave[i] * elapsed);
 		}
 	}
 
@@ -111,9 +111,9 @@ void main()
 	// Round world
 	vec4 worldSpacePos = m * vecIn;
 	worldSpacePos.xyz -= camPos.xyz; 
-	// worldSpacePos = vec4( 0.0, 0.0, ((worldSpacePos.x * worldSpacePos.x) + (worldSpacePos.y * worldSpacePos.y))* - 0.001, 0.0);
+	worldSpacePos = vec4( 0.0, 0.0, ((worldSpacePos.x * worldSpacePos.x) + (worldSpacePos.y * worldSpacePos.y))* - 0.001, 0.0);
 
-	// vecIn +=  worldSpacePos;
+	vecIn +=  worldSpacePos;
 
 	////////////////////////////////////////////////
 	// Calcul shadow coord
@@ -127,7 +127,7 @@ void main()
 
 	////////////////////////////////////////////////
 	// Reflexion
-	gl_ClipDistance[0] = -dot(m * vecIn, vec4(0, 0, -1, water_height));
+	gl_ClipDistance[0] = -dot(m * vecIn, vec4(0, 0, -1, water_height-1));
 	
 	vec4 tangent = vec4(1.0, 0.0, 0.0, 0.0);
     vec4 norm = vec4(0.0, 1.0, 0.0, 0.0);

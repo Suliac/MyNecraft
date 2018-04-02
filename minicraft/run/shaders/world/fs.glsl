@@ -20,6 +20,11 @@ out vec4 color_out;
 #define CUBE_NUAGE 7.0f
 
 uniform vec3 lightDir;
+uniform vec3 sunColor;
+
+uniform mat4 m;
+uniform mat4 mv;
+uniform mat4 mvp;
 
 uniform sampler2D TexCustom_0;
 uniform sampler2D TexCustom_1;
@@ -38,6 +43,7 @@ in vec4 waterTex4; //viewts
 
 void main()
 {
+	///////////////////// Tecturing
 	float y = uv.y/2+0.5;
 	float x = (uv.x+type)/32.0;
 	
@@ -46,25 +52,13 @@ void main()
 
 	vec2 pos = vec2(x,y);
 	vec4 newColor = texture2D(TexCustom_0, pos);
-	// if(int(vecIn.x)+0.1 < vecIn.x &&int(vecIn.x)-0.1 > vecIn.x && int(vecIn.y)+0.1 < vecIn.y &&int(vecIn.y)-0.1 > vecIn.y)
-	// 	newColor = vec4(0.0, 0.0, 0.0, newColor.a);
 
-	float cosTheta = dot(normal, lightDir);
-	cosTheta = clamp(cosTheta, 0.0, 1.0);
-
-	float bias = 0.007 * tan(acos(cosTheta));
-	bias = clamp(bias, 0.0,0.01);
-
-	float visibility = 1.0;
-	if ( texture( TexShadow, shadowCoord.xy ).z  <  shadowCoord.z-bias){
-		visibility = 0.5;
+	if(type == CUBE_NUAGE)
+	{
+		newColor = color;
 	}
-
-	vec3 p_color = newColor.rgb * visibility /**(max(0,normal.z+normal.y/2)+0.2f)*/;
-
-	color_out = vec4(p_color.rgb,newColor.a);
-
-	///////////////////// reflexion
+	
+	///////////////////// Reflexion
 	if(type == CUBE_EAU)
 	{	
 		newColor = color;	
@@ -99,11 +93,34 @@ void main()
 		reflexionColor = texture2D(TexReflect, vec2(tmp));
 
 		//Fresnel
-		vec4 invfres = vec4( dot(vNorm, viewt) );
+		vec4 invfres = vec4( dot(vNorm, viewt) ) ;
 		vec4 fres = vec4(1.0) -invfres ;
-		fres = clamp(fres, vec4(0.75), vec4(1));
-		reflexionColor *= fres;
+		// fres.xyz = (1-fres.xyz)* sunColor.xyz + fres.xyz * reflexionColor.xyz;
+		// fres = clamp(fres, vec4(0.75), vec4(1));
+		// reflexionColor *= fres;
 
-		color_out = vec4(reflexionColor.rgb,newColor.a);
+		newColor = reflexionColor;
+		newColor.a *= clamp(fres.x, 0.75,0.9);
 	}
+
+	///////////////////// Ombrage
+	float cosTheta = dot(normal, lightDir);
+	cosTheta = clamp(cosTheta, 0.0, 1.0);
+
+	float delta = 1;
+	float bias = 0.007 * tan(acos(cosTheta));
+	if(type == CUBE_EAU)
+	{
+		bias = 0.007;
+	}
+	bias = clamp(bias, 0.0,0.01);
+
+	float visibility = 1.0;
+	if ( texture( TexShadow, shadowCoord.xy ).z  <  shadowCoord.z-bias){
+		visibility = 0.5;
+	}
+
+	vec3 p_color = newColor.rgb * visibility /**(max(0,normal.z+normal.y/2)+0.2f)*/;
+
+	color_out = vec4(p_color.rgb,newColor.a);
 }
