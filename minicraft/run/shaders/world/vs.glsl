@@ -107,13 +107,6 @@ void main()
 		}
 	}
 
-	///////////////////////////////////////////////
-	// Round world
-	vec4 worldSpacePos = m * vecIn;
-	worldSpacePos.xyz -= camPos.xyz; 
-	worldSpacePos = vec4( 0.0, 0.0, ((worldSpacePos.x * worldSpacePos.x) + (worldSpacePos.y * worldSpacePos.y))* - 0.001, 0.0);
-
-	vecIn +=  worldSpacePos;
 
 	////////////////////////////////////////////////
 	// Calcul shadow coord
@@ -124,11 +117,19 @@ void main()
 	normal = (nmat * normIn).xyz; 
 
 	color = CubeColors[int(vs_type_in)];
+	////////////////////////////////////////////////
+	// Round world
+	vec4 worldSpacePos = m * vecIn;
+	worldSpacePos.xyz -= camPos.xyz; 
+	worldSpacePos = vec4( 0.0, 0.0, ((worldSpacePos.x * worldSpacePos.x) + (worldSpacePos.y * worldSpacePos.y))* - 0.001, 0.0);
+
+	vecIn +=  worldSpacePos;
 
 	////////////////////////////////////////////////
 	// Reflexion
-	gl_ClipDistance[0] = -dot(m * vecIn, vec4(0, 0, -1, water_height-1));
-	
+	gl_ClipDistance[0] = -dot(m * vecIn, vec4(0, 0, -1, water_height+1));
+	// gl_ClipDistance[0] = dot(m * vecIn, vec4(0,0,1,-water_height + 0.02));
+
 	vec4 tangent = vec4(1.0, 0.0, 0.0, 0.0);
     vec4 norm = vec4(0.0, 1.0, 0.0, 0.0);
     vec4 binormal = vec4(0.0, 0.0, 1.0, 0.0);
@@ -148,6 +149,6 @@ void main()
     // waterTex2 = gl_MultiTexCoord0 + t2;
   
     // waterTex3 = mpos;
-	////////////////////////////////////////////////
+	///////////////////////////////////////////////
 	gl_Position =  mvp * vecIn;
 }

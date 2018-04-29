@@ -120,7 +120,7 @@ public:
 
 	YVec3f symetry(float zplane, YVec3f pos) {
 		pos.Z -= (pos.Z - zplane) * 2;
-		//pos.Z -= (0.25f) ;
+		pos.Z += (1.0f) ;
 		return pos;
 	}
 
